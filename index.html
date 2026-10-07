@@ -20,7 +20,7 @@
 
 <div id="side-menu" class="side-menu">
 
-    <a href="#home" onclick="closemenu()">🏠 Home</a>
+    <a href="#home" onclick="togglemenu()">🏠 Home</a>
     <a href="#facts" onclick="toggleMenu()">🔥 Facts</a>
     <a href="#about" onclick="toggleMenu()">ℹ️ About</a>
     <a href="#contact" onclick="toggleMenu()">📩 Contact</a>
@@ -130,6 +130,7 @@
       </footer>
 
         <script>
+<script>
 function toggleMenu() {
     const menu = document.getElementById("side-menu");
     const button = document.querySelector(".menu-button");
@@ -142,6 +143,22 @@ function toggleMenu() {
         button.innerHTML = "✕";
     }
 }
+
+/* Menu ke bahar click karne par band */
+document.addEventListener("click", function(event) {
+    const menu = document.getElementById("side-menu");
+    const button = document.querySelector(".menu-button");
+
+    if (
+        menu.style.display === "block" &&
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+    ) {
+        menu.style.display = "none";
+        button.innerHTML = "☰";
+    }
+});
+</script>
 
 function closeMenu() {
     const menu = document.getElementById("side-menu");
