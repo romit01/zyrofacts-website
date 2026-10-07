@@ -20,7 +20,7 @@
 
 <div id="side-menu" class="side-menu">
 
-    <a href="#home" onclick="toggleMenu()">🏠 Home</a>
+    <a href="#home" onclick="closemenu()">🏠 Home</a>
     <a href="#facts" onclick="toggleMenu()">🔥 Facts</a>
     <a href="#about" onclick="toggleMenu()">ℹ️ About</a>
     <a href="#contact" onclick="toggleMenu()">📩 Contact</a>
@@ -141,6 +141,19 @@ function toggleMenu() {
         menu.style.display = "block";
         button.innerHTML = "✕";
     }
+}
+
+function closeMenu() {
+    const menu = document.getElementById("side-menu");
+    const button = document.querySelector(".menu-button");
+
+    menu.style.display = "none";
+    button.innerHTML = "☰";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
     </script>
 </body>
