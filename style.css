@@ -75,3 +75,57 @@ footer {
 .read-more:hover {
     background: #0d35a0;
 }
+/* FACT DETAILS PAGE */
+
+.fact-page {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.fact-page > h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.fact-detail-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.fact-detail-card h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.fact-detail-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.fact-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.back-button {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.back-button:hover {
+    background: #2563eb;
+}
