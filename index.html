@@ -129,5 +129,19 @@
     <p>Facts • Knowledge • Science • Technology</p>
       </footer>
 
+        <script>
+function toggleMenu() {
+    const menu = document.getElementById("side-menu");
+    const button = document.querySelector(".menu-button");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+        button.innerHTML = "☰";
+    } else {
+        menu.style.display = "block";
+        button.innerHTML = "✕";
+    }
+}
+    </script>
 </body>
 </html>
