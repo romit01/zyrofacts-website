@@ -130,7 +130,6 @@
       </footer>
 
         <script>
-<script>
 function toggleMenu() {
     const menu = document.getElementById("side-menu");
     const button = document.querySelector(".menu-button");
@@ -144,7 +143,14 @@ function toggleMenu() {
     }
 }
 
-/* Menu ke bahar click karne par band */
+function closeMenu() {
+    const menu = document.getElementById("side-menu");
+    const button = document.querySelector(".menu-button");
+
+    menu.style.display = "none";
+    button.innerHTML = "☰";
+}
+
 document.addEventListener("click", function(event) {
     const menu = document.getElementById("side-menu");
     const button = document.querySelector(".menu-button");
@@ -154,24 +160,9 @@ document.addEventListener("click", function(event) {
         !menu.contains(event.target) &&
         !button.contains(event.target)
     ) {
-        menu.style.display = "none";
-        button.innerHTML = "☰";
+        closeMenu();
     }
 });
-</script>
-
-function closeMenu() {
-    const menu = document.getElementById("side-menu");
-    const button = document.querySelector(".menu-button");
-
-    menu.style.display = "none";
-    button.innerHTML = "☰";
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-    </script>
+        </script>
 </body>
 </html>
